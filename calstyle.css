@@ -1,13 +1,43 @@
 body {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  background-color: darkblue;
-  color: aliceblue;
+  min-height: 100vh;
 }
 
 header {
   font-size: 25px;
   font-family: "Roboto", sans-serif;
+}
+
+.center {
+  width: 350px;
+  background: darkblue;
+  color: aliceblue;
+  border-radius: 20px;
+}
+
+input[type="text"] {
+  height: 50px;
+  width: 300px;
+  margin-top: 40px;
+  border-radius: 1px solid;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 23px;
+}
+
+input[type="button"] {
+  width: 58px;
+  height: 55px;
+  margin: 5px;
+  font-size: 20px;
+  line-height: 55px;
+  border-radius: 3px;
+}
+input[type="button"]:hover {
+  transition: 0.5s;
+  background: orange;
 }
