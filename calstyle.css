@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: darkblue;
+  color: aliceblue;
+}
+
+header {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
