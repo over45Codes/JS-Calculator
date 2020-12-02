@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
     <title>Grace's Calculator App</title>
   </head>
   <body>
@@ -16,31 +19,34 @@
       <h1>Calculator</h1>
     </header>
     <form>
-      <div class="center">
-        <input id="display" type="text" value="0" />
+      <div class="calculator">
+        <input id="display" type="number" value="0" />
         <h2>Non-Casio GC-005</h2>
-        <div id="input-buttons">
-          <input id="MR" type="button" value="MR" />
-          <input id="M-" type="button" value="M-" />
-          <input id="M+" type="button" value="M+" />
-          <input id="divide" type="button" value="/" /><br />
-          <input id="seven" type="button" value="7" />
-          <input id="eight" type="button" value="8" />
-          <input id="nine" type="button" value="9" />
-          <input id="multi" type="button" value="*" /><br />
-          <input id="four" type="button" value="4" />
-          <input id="five" type="button" value="5" />
-          <input id="six" type="button" value="6" />
-          <input id="subt" type="button" value="-" /><br />
-          <input id="one" type="button" value="1" />
-          <input id="two" type="button" value="2" />
-          <input id="three" type="button" value="3" />
-          <input id="add" type="button" value="+" /><br />
-          <input id="zero" type="button" value="0" />
-          <input id="dot" type="button" value="." />
-          <input id="clear" type="button" value="C" />
-          <input id="equal" type="button" value="=" /><br />
-        </div>
+        <button class="memory-btn">MR></button>
+        <button class="memory-btn">M-></button>
+        <button class="memory-btn">M+</button>
+        <button class="operator">/</button>
+        <br />
+        <button class="number-btn">7</button>
+        <button class="number-btn">8</button>
+        <button class="number-btn">9</button>
+        <button class="operator">*</button>
+        <br />
+        <button class="number-btn">4</button>
+        <button class="number-btn">5</button>
+        <button class="number-btn">6</button>
+        <button class="operator">-</button>
+        <br />
+        <button class="number-btn">1</button>
+        <button class="number-btn">2</button>
+        <button class="number-btn">3</button>
+        <button class="operator">+</button>
+        <br />
+        <button class="number-btn">0</button>
+        <button class="number-btn">.</button>
+        <button id="clear">C</button>
+        <button id="equal">=</button>
+        <br />
       </div>
     </form>
     <script src="calscript.js"></script>
