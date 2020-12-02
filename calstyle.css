@@ -5,7 +5,7 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  background-color: pink;
+  background-color: rgb(243, 119, 171);
 }
 
 header {
