@@ -1,6 +1,8 @@
 let memoryButtons = document.querySelectorAll(".memory-btn");
 let numbersButtons = document.querySelectorAll(".number-btn");
 let operatorButtons = document.querySelectorAll(".operator");
+const displayOutput = document.getElementById("display");
+console.log("displayed", displayOutput);
 
 const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", (event) => {
@@ -34,18 +36,6 @@ operatorButtons.forEach((button) => {
     console.log("clicked", button);
   });
 });
-
-const calcDisplay = document.getElementById("display");
-const calculator = {
-  displayOutput: "",
-};
-
-function renderDisplay(button) {
-  button.addEventListener("click", () => {
-    calcDisplay.appendNumber(button.textContent);
-    calculator.renderDisplay();
-  });
-}
 
 // / TEST CASE
 //THIS IS WHERE I AM AT RENDERING - GC 9:57PM 12/03
