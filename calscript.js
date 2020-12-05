@@ -2,38 +2,45 @@ let memoryButtons = document.querySelectorAll(".memory-btn");
 let numbersButtons = document.querySelectorAll(".number-btn");
 let operatorButtons = document.querySelectorAll(".operator");
 const displayOutput = document.getElementById("display");
-console.log("displayed", displayOutput);
+console.log("displayed", displayOutput.value);
 
 const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked", clearButton);
+  console.log(`clicked: ${clearButton.textContent}`);
 });
 
 const equalButton = document.getElementById("equal");
 equalButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("clicked", equalButton);
+  console.log(`clicked: ${equalButton.textContent}`);
 });
 
 memoryButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("clicked", button);
+    console.log(`clicked: ${button.textContent}`);
   });
 });
 
+// //numberButtons.forEach(buttons => {
+//   buttons.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     // what goes here ?? hint: display value = button content
+//   })
+// })
 numbersButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("clicked", button);
+    console.log(`clicked: ${button.textContent}`);
+    displayOutput.textContent = button.textContent;
   });
 });
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("clicked", button);
+    console.log(`clicked: ${button.textContent}`);
   });
 });
 
