@@ -5,23 +5,24 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  background-color: rgb(243, 119, 171);
+  background-color: lightseagreen;
 }
 
 header {
   font-size: 25px;
   font-family: "Roboto", sans-serif;
+  color: aliceblue;
 }
 
 .calculator {
   width: 350px;
-  background: darkblue;
+  background: black;
   color: aliceblue;
   border-radius: 20px;
   padding-bottom: 15px;
 }
 
-input[type="number"] {
+input[type="text"] {
   height: 50px;
   width: 300px;
   margin-top: 40px;
@@ -42,4 +43,14 @@ button {
 button:hover {
   transition: 0.5s;
   background: orange;
+}
+
+#clear {
+  color: white;
+  background-color: magenta;
+}
+
+#equal {
+  color: white;
+  background-color: lightseagreen;
 }

@@ -8,32 +8,29 @@ const clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(`clicked: ${clearButton.textContent}`);
+  displayOutput.value = clearButton.textContent;
 });
 
 const equalButton = document.getElementById("equal");
 equalButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(`clicked: ${equalButton.textContent}`);
+  displayOutput.value = equalButton.textContent;
 });
 
 memoryButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
+    displayOutput.value = button.textContent;
   });
 });
 
-// //numberButtons.forEach(buttons => {
-//   buttons.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     // what goes here ?? hint: display value = button content
-//   })
-// })
 numbersButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
-    displayOutput.textContent = button.textContent;
+    displayOutput.value = button.textContent;
   });
 });
 
@@ -41,6 +38,7 @@ operatorButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
+    displayOutput.value = button.textContent;
   });
 });
 
@@ -49,22 +47,22 @@ operatorButtons.forEach((button) => {
 // Description: Adding 1 + 2 = 3
 // 1.) Click on the number one button
 // EXPECTATION: Show 1 in the display
-// ACTUAL: ???
+// ACTUAL: ???  DONE - THE NUMBER 1 APPEARS
 
 // 2.) Click on the plus button
 // EXPECTATION: Nothing. (Still showing 1 in the display)
-// ACTUAL: ???
+// ACTUAL: ??? DONE
 
 // 3.) Click on the number two button
 // EXPECTATION: Show 2 in the display
-// ACTUAL: ???
+// ACTUAL: ??? DONE
 
 // 4.) Click on the equals button
 // EXPECTATION: Show 3 in the display
-// ACTUAL: ???
+// ACTUAL: ??? need to display 3
 // ===========================================
 // // TEST CASE
-// // Description: Adding 11 + 22 = 33
+// // Description: Adding 11 + 22 = 33  (use += to display 111111)
 
 // 1.) Click on the number one button
 // EXPECTATION: Show 1 in the display
