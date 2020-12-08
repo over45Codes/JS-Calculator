@@ -43,7 +43,6 @@ operatorButtons.forEach((button) => {
 });
 
 // / TEST CASE
-//THIS IS WHERE I AM AT RENDERING - GC 9:57PM 12/03
 // Description: Adding 1 + 2 = 3
 // 1.) Click on the number one button
 // EXPECTATION: Show 1 in the display
@@ -51,15 +50,17 @@ operatorButtons.forEach((button) => {
 
 // 2.) Click on the plus button
 // EXPECTATION: Nothing. (Still showing 1 in the display)
-// ACTUAL: ??? DONE
+// ACTUAL: ??? DONE - THE + SIGN APPEARS
 
 // 3.) Click on the number two button
 // EXPECTATION: Show 2 in the display
-// ACTUAL: ??? DONE
+// ACTUAL: ??? DONE - THE NUMBER 2 APPEARS
 
 // 4.) Click on the equals button
 // EXPECTATION: Show 3 in the display
-// ACTUAL: ??? need to display 3
+// ACTUAL: ??? need to display 3 = NO
+// ** Need to create a variable number1 and number 2 assign value of the button click, where it will return the value in a number not a string -
+// create or assign function that will execute this and add a operator and create an eventListener that upon clicking the equal button it will process the mathematical function and render the result on the screen.
 // ===========================================
 // // TEST CASE
 // // Description: Adding 11 + 22 = 33  (use += to display 111111)
