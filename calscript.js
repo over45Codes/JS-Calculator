@@ -1,3 +1,5 @@
+const values = [];
+let operation;
 let memoryButtons = document.querySelectorAll(".memory-btn");
 let numbersButtons = document.querySelectorAll(".number-btn");
 let operatorButtons = document.querySelectorAll(".operator");
@@ -16,6 +18,8 @@ equalButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(`clicked: ${equalButton.textContent}`);
   displayOutput.value = equalButton.textContent;
+  const result = operation(...values);
+  displayOutput.value = result;
 });
 
 memoryButtons.forEach((button) => {
@@ -31,6 +35,7 @@ numbersButtons.forEach((button) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
     displayOutput.value = button.textContent;
+    values.push(Number.parseInt(button.textContent));
   });
 });
 
@@ -39,8 +44,35 @@ operatorButtons.forEach((button) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
     displayOutput.value = button.textContent;
+    if (button.textContent === "+") {
+      operation = add;
+    }
+    if (button.textContent === "-") {
+      operation = subtract;
+    }
+    if (button.textContent === "*") {
+      operation = multiply;
+    }
+    if (button.textContent === "/") {
+      operation = divide;
+    }
   });
 });
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+function divide(num1, num2) {
+  return num1 / num2;
+}
 
 // / TEST CASE
 // Description: Adding 1 + 2 = 3
