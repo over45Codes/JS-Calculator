@@ -1,5 +1,7 @@
 const values = [];
-let operation;
+let operation = null;
+let num1 = null;
+let num2 = null;
 let memoryButtons = document.querySelectorAll(".memory-btn");
 let numbersButtons = document.querySelectorAll(".number-btn");
 let operatorButtons = document.querySelectorAll(".operator");
@@ -36,12 +38,20 @@ numbersButtons.forEach((button) => {
     console.log(`clicked: ${button.textContent}`);
     displayOutput.value += button.textContent;
     values.push(Number.parseInt(button.textContent));
+    if (operation !== null) {
+      num2 = event.target.value;
+      button.textContent = num2;
+    } else {
+      num1 = event.target.value;
+      //   button.textContent = num1;
+    }
   });
 });
 
 operatorButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
+    operation = event.target.value;
     console.log(`clicked: ${button.textContent}`);
     displayOutput.value = button.textContent;
     if (button.textContent === "+") {
