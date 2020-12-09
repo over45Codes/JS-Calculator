@@ -34,7 +34,7 @@ numbersButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(`clicked: ${button.textContent}`);
-    displayOutput.value = button.textContent;
+    displayOutput.value += button.textContent;
     values.push(Number.parseInt(button.textContent));
   });
 });
