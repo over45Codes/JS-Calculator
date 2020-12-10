@@ -44,7 +44,7 @@ numbersButtons.forEach((button) => {
     // ·      Setting the second number
     // ·      Pressing the equal button for the result
     // ·      Here is where we can think about the continuation.. We can do something like if there's a result, then we'll want that to be our first number, then basically repeat the steps above.
-    // Would it go here ???
+    // Would it go here ??? and what about the  //operation = event.target.value; go ?? Under operatorButtons
     //   if (operation !== null) {
     //     num2 = event.target.value;
     //     button.textContent = num2;
@@ -58,7 +58,7 @@ numbersButtons.forEach((button) => {
   operatorButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
-      operation = event.target.value;
+      //operation = event.target.value;
       //console.log(`clicked: ${button.textContent}`);
       displayOutput.value = button.textContent;
       if (button.textContent === "+") {
