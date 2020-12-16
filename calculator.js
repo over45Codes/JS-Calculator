@@ -1,3 +1,17 @@
+// Press 2
+// 2
+// Press +
+// +
+// operation = undefined
+// Press 3
+// 3
+// Press +
+// 5 (+)
+// operation = fn
+// Press 4
+// 4
+// Press =
+// 9 (5)
 const values = [];
 let operation; // or let operator = null;
 // let num1 = null; // trying to use two variables to enable continous function operation
@@ -54,44 +68,43 @@ numbersButtons.forEach((button) => {
     //   }
     // });
   });
-
-  operatorButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      //operation = event.target.value;
-      //console.log(`clicked: ${button.textContent}`);
-      displayOutput.value = button.textContent;
-      if (button.textContent === "+") {
-        operation = add;
-      }
-      if (button.textContent === "-") {
-        operation = subtract;
-      }
-      if (button.textContent === "*") {
-        operation = multiply;
-      }
-      if (button.textContent === "/") {
-        operation = divide;
-      }
-    });
-  });
-
-  function add(num1, num2) {
-    return num1 + num2;
-  }
-
-  function subtract(num1, num2) {
-    return num1 - num2;
-  }
-
-  function multiply(num1, num2) {
-    return num1 * num2;
-  }
-  function divide(num1, num2) {
-    return num1 / num2;
-  }
 });
 
+operatorButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    //operation = event.target.value;
+    //console.log(`clicked: ${button.textContent}`);
+    displayOutput.value = button.textContent;
+    if (button.textContent === "+") {
+      operation = add;
+    }
+    if (button.textContent === "-") {
+      operation = subtract;
+    }
+    if (button.textContent === "*") {
+      operation = multiply;
+    }
+    if (button.textContent === "/") {
+      operation = divide;
+    }
+  });
+});
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+function divide(num1, num2) {
+  return num1 / num2;
+}
 // ===========================================
 // // TEST CASE
 // // Description: Adding 11 + 22 = 33  (use += to display 111111)
