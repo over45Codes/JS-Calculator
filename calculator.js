@@ -50,6 +50,12 @@ numbersButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     //console.log(`clicked: ${button.textContent}`);
+
+    //if firstnumber is not empty
+    //concatenate button.textContent and the firstNumber
+    //else
+    //set the display output equal to the firstnumber
+    //will have to reverse - values.push(Number.parseInt(button.textContent));
     displayOutput.value = button.textContent;
     values.push(Number.parseInt(button.textContent));
     //logic here with continuous operation, if you break it all down there are a few steps we can take:
