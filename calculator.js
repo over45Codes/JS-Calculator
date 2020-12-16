@@ -73,10 +73,19 @@ numbersButtons.forEach((button) => {
 operatorButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
+    debugger;
     //operation = event.target.value;
     //console.log(`clicked: ${button.textContent}`);
     displayOutput.value = button.textContent;
     if (button.textContent === "+") {
+      // if operation is not empty
+      if (operation) {
+        const result = (values[0], values[1]);
+        //set the display to "result"
+        //reset the values array
+        operation();
+      }
+      //then execute operation
       operation = add;
     }
     if (button.textContent === "-") {
