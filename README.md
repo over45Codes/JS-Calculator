@@ -2,7 +2,7 @@
 
 Calculator application game built in JavaScript, HTML and CSS
 
-Try it [here!](https://gracii.github.io/JS-Calculator/)
+Try it [here!](https://graciicodes.github.io/JS-Calculator/)
 
 ![alt text]()
 
